@@ -1,9 +1,9 @@
 const express = require("express");
 const wrapAsync = require("../utils/wrapAsync.js");
-const { validateListing, isLoggedIn, isOwner } = require("../middleware.js");
+const { validateListing, isLoggedIn, isOwner } = require("../middlewares/middleware.js");
 const listingController = require("../controllers/listing.js");
 const multer = require("multer");
-const { storage } = require("../cloudConfig.js");
+const { storage } = require("../db/cloudConfig.js");
 const upload = multer({ storage });
 
 
