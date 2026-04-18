@@ -41,37 +41,3 @@ router.get("/:id/edit", isLoggedIn, isOwner, wrapAsync(listingController.renderE
 
 module.exports = router;
 
-// TThis was in app.js  for testing
-// Create Route
-// app.post("/listings", async (req, res) => {
-//     // let { title, description, image, price, country, location } = req.body;
-//     // let listing = req.body.listing;
-//     // console.log(listing);
-//     const newListing = new Listing(req.body.listing);
-//     await newListing.save();
-//     res.redirect("/listings");
-// });
-
-
-// app.get("/testListing", async (req, res) => {
-//     let sampleListing = new Listing({
-//         title: "My new villa",
-//         description: "By the beach",
-//         price: 1200,
-//         location: "Calangute, Goa",
-//         country: "India",
-//     });
-
-//     await sampleListing.save();
-//     console.log("Smaple was saved.");
-//     res.send("successful testing");
-// });
-
-// app.use((err, req, res, next) => {
-//     res.send("something went wrong");
-// });
-
-
-// // Routes
-// app.get("/");
-
